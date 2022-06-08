@@ -18,7 +18,7 @@ import java.util.List;
 @Table(name = "t_tenant")
 @SQLDelete(sql = "UPDATE t_tenant set deleted = true where id=?")
 @Where(clause = "deleted=false")
-public abstract class Tenant extends UserDateAudit {
+public  class Tenant extends UserDateAudit {
 
     @NotBlank(message = "组织ID不能为空")
     private String organizationId;
