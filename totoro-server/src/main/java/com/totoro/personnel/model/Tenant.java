@@ -1,6 +1,5 @@
 package com.totoro.personnel.model;
 
-import com.totoro.personnel.model.audit.DateAudit;
 import com.totoro.personnel.model.audit.UserDateAudit;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
