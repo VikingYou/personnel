@@ -27,6 +27,16 @@ public abstract class UserDateAudit extends DateAudit{
     @LastModifiedDate
     private Long updatedBy;
 
+    private boolean deleted =Boolean.FALSE;
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
+    }
+
     public Long getCreatedBy() {
         return createdBy;
     }

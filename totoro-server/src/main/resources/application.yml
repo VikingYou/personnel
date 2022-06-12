@@ -13,3 +13,7 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+springdoc:
+  swagger-ui:
+    operations-sorter: method
+    path: /swagger-ui-custom.html

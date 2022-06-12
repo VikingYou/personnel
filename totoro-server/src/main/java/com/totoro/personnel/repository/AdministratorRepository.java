@@ -13,7 +13,7 @@ import java.util.Optional;
 @Repository
 public interface AdministratorRepository extends JpaRepository<Administrator, Long> {
 
-    List<Administrator> findIdIn(List<Long> tenantIds);
+    List<Administrator> findByIdIn(List<Long> tenantIds);
 
 
 }
