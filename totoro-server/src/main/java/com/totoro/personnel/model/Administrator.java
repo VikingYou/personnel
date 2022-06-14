@@ -10,6 +10,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "t_hr_administrator")
 public class Administrator extends UserDateAudit {
+    @Id
+    private Long id;
     private String staffName;
 
     private String staffId;
@@ -50,5 +52,13 @@ public class Administrator extends UserDateAudit {
 
     public void setPhotoName(String photoName) {
         this.photoName = photoName;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

@@ -17,14 +17,13 @@ public class JobType extends UserDateAudit {
 
 
     private String jobTypeName;
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long jobTypeId;
 
     @OneToMany(mappedBy = "jobType",
             cascade = CascadeType.ALL,
-            fetch = FetchType.EAGER,
-            orphanRemoval = true)
-    @Fetch(FetchMode.SELECT)
+            fetch = FetchType.EAGER)
     private List<JobLevel> jobLevelList = new ArrayList<>();
 
     public String getJobTypeName() {

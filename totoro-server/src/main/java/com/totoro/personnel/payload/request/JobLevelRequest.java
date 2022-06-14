@@ -11,6 +11,6 @@ import java.util.List;
 @Data
 public class JobLevelRequest {
     private String jobLevelName;
-    private String jobLevelId;
+    private Long jobLevelId;
     private JobTypeRequest jobType;
 }

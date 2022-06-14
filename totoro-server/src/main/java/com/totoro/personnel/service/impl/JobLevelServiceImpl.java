@@ -56,7 +56,7 @@ public class JobLevelServiceImpl implements JobLevelService {
         List<JobType> jobTypes = jobTypeRepository.findAllById(jobTypeIds);
 
         Map<Long, JobType> jobTypeMap = jobTypes.stream()
-                .collect(Collectors.toMap(JobType::getId, Function.identity()));
+                .collect(Collectors.toMap(JobType::getJobTypeId, Function.identity()));
         return jobTypeMap;
     }
 

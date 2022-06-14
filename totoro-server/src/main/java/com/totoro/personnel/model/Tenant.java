@@ -18,8 +18,9 @@ import java.util.List;
 @Table(name = "t_tenant")
 @SQLDelete(sql = "UPDATE t_tenant set deleted = true where id=?")
 @Where(clause = "deleted=false")
-public  class Tenant extends UserDateAudit {
-
+public class Tenant extends UserDateAudit {
+    @Id
+    private Long id;
     @NotBlank(message = "组织ID不能为空")
     private String organizationId;
     @NotBlank(message = "组织名称不能为空")
@@ -65,5 +66,13 @@ public  class Tenant extends UserDateAudit {
 
     public void setAdministrators(List<Administrator> administrators) {
         this.administrators = administrators;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

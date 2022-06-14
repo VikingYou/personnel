@@ -2,8 +2,7 @@ package com.totoro.personnel.model;
 
 import com.totoro.personnel.model.audit.UserDateAudit;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by ycd20 on 2022/06/12
@@ -12,7 +11,9 @@ import javax.persistence.Table;
 @Table(name = "t_job_title")
 public class JobTitle extends UserDateAudit {
     private String jobTitleName;
-    private String jobTitleId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private  Long jobTitleId;
 
     public String getJobTitleName() {
         return jobTitleName;
@@ -22,11 +23,11 @@ public class JobTitle extends UserDateAudit {
         this.jobTitleName = jobTitleName;
     }
 
-    public String getJobTitleId() {
+    public Long getJobTitleId() {
         return jobTitleId;
     }
 
-    public void setJobTitleId(String jobTitleId) {
+    public void setJobTitleId(Long jobTitleId) {
         this.jobTitleId = jobTitleId;
     }
 }

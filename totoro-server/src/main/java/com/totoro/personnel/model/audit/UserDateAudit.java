@@ -17,9 +17,7 @@ import javax.persistence.*;
         allowGetters = true
 )
 public abstract class UserDateAudit extends DateAudit{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
     @CreatedBy
     @Column(updatable = false)
     private Long createdBy;
@@ -53,11 +51,5 @@ public abstract class UserDateAudit extends DateAudit{
         this.updatedBy = updatedBy;
     }
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 }

@@ -8,5 +8,5 @@ import lombok.Data;
 @Data
 public class JobTitleRequest {
    private String jobTitleName;
-   private String jobTitleId;
+   private Long jobTitleId;
 }

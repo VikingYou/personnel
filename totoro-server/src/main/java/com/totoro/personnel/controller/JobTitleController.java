@@ -35,8 +35,8 @@ public class JobTitleController {
     public ResponseEntity<?> createJobTitle(@Valid @RequestBody JobTitleRequest jobTitleRequest) {
         JobTitle jobTitle = jobTitleService.createJobTitle(jobTitleRequest);
         URI location = ServletUriComponentsBuilder
-                .fromCurrentRequest().path("/{jobLevelId}")
-                .buildAndExpand(jobTitle.getId()).toUri();
+                .fromCurrentRequest().path("/{jobTitleId}")
+                .buildAndExpand(jobTitle.getJobTitleId()).toUri();
         return ResponseEntity.created(location)
                 .body(new ApiResponse(true, "JobTile created successfully"));
     }

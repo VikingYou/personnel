@@ -37,7 +37,7 @@ public class JobTypeController {
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest().path("/{jobTypeId}")
-                .buildAndExpand(jobType.getId()).toUri();
+                .buildAndExpand(jobType.getJobTypeId()).toUri();
         return ResponseEntity.created(location)
                 .body(new ApiResponse(true, "JobType Created Successfully"));
 

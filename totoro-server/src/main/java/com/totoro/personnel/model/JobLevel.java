@@ -11,10 +11,14 @@ import javax.persistence.*;
 @Entity
 @Table(name = "t_job_level")
 public class JobLevel extends UserDateAudit {
-    private String jobLevelName;
-    private String jobLevelId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long jobLevelId;
 
-    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL,optional = false)
+    private String jobLevelName;
+
+
+    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinColumn(name = "job_type_id",nullable = false)
     private JobType jobType;
 
@@ -26,11 +30,11 @@ public class JobLevel extends UserDateAudit {
         this.jobLevelName = jobLevelName;
     }
 
-    public String getJobLevelId() {
+    public Long getJobLevelId() {
         return jobLevelId;
     }
 
-    public void setJobLevelId(String jobLevelId) {
+    public void setJobLevelId(Long jobLevelId) {
         this.jobLevelId = jobLevelId;
     }
 

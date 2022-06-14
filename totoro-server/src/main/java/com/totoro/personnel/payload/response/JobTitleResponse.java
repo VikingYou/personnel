@@ -7,7 +7,6 @@ import lombok.Data;
  */
 @Data
 public class JobTitleResponse {
-    private long id;
     private String jobTitleName;
-    private String jobTitleId;
+    private Long jobTitleId;
 }

@@ -33,7 +33,6 @@ public class ModelMapper {
         JobTypeResponse jobTypeResponse = new JobTypeResponse();
         jobTypeResponse.setJobTypeId(jobType.getJobTypeId());
         jobTypeResponse.setJobTypeName(jobType.getJobTypeName());
-        jobTypeResponse.setId(jobType.getId());
         return jobTypeResponse;
     }
 
