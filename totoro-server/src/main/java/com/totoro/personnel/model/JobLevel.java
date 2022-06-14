@@ -12,7 +12,6 @@ import javax.persistence.*;
 @Table(name = "t_job_level")
 public class JobLevel extends UserDateAudit {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long jobLevelId;
 
     private String jobLevelName;

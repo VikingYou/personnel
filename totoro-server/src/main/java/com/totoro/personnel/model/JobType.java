@@ -18,7 +18,6 @@ public class JobType extends UserDateAudit {
 
     private String jobTypeName;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long jobTypeId;
 
     @OneToMany(mappedBy = "jobType",

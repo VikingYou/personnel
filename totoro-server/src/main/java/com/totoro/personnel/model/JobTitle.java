@@ -12,7 +12,6 @@ import javax.persistence.*;
 public class JobTitle extends UserDateAudit {
     private String jobTitleName;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private  Long jobTitleId;
 
     public String getJobTitleName() {
